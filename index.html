@@ -16,47 +16,61 @@
 			href="https://fonts.googleapis.com/css2?family=Rubik&display=swap"
 			rel="stylesheet" />
 		<link
+			rel="preconnect"
+			href="https://fonts.googleapis.com" />
+		<link
+			rel="preconnect"
+			href="https://fonts.gstatic.com"
+			crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Fjalla+One&display=swap"
+			rel="stylesheet" />
+		<link
 			rel="stylesheet"
 			href="styles/index.css" />
 	</head>
 	<body>
+        <div id="app"
 		<header>
-			<h1 id="greeting">Hello,</h1>
+			<h1 id="greeting"></h1>
 		</header>
 		<section id="weather">
-            <section id="city_temp"></section>
-			    <button
+			<section id="city_temp"></section>
+			<button
 				id="decrease"
 				class="weather-button">
-			        -
-			    </button>
-			    <div id="temperature">80</div>
-			    <button
+				-
+			</button>
+			<div id="temperature">80</div>
+			<button
 				id="increase"
 				class="weather-button">
-                    +
-                </button>
-        </section>
+				+
+			</button>
+		</section>
 
-        <section class="city-name__section">
-            <h2>City Name</h2>
-            <input
-                type="text"
-                id="cityNameInput" />
-            <button
-                id="cityNameReset"
-                class="city-name__reset-btn">
-                Reset
-            </button>
-        </section>
-		
-        <section class="garden__section">
-            <h2>Weather Garden</h2>
-            <div id="gardenContent" class="garden__content">
-                <div id="sky"></div>
-                <div id="landscape"></div>
-            </div>
-        </section>
+		<section class="city-name__section">
+			<h2>City Name</h2>
+			<input
+				type="text"
+				id="cityNameInput" />
+			<button
+				id="cityNameReset"
+				class="city-name__reset-btn">
+				Reset
+			</button>
+		</section>
+
+		<section class="garden__section">
+			<h2>Weather Garden</h2>
+			<div
+				id="gardenContent"
+				class="garden__content">
+				<div id="sky"></div>
+				<div id="landscape"></div>
+			</div>
+		</section>
+    </div>
 		<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 		<script src="./src/index.js"></script>
 	</body>
