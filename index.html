@@ -1,15 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Weather Report</title>
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Rubik&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles/index.css" />
-</head>
-<body>
-    <script src="./src/index.js"></script>
-</body>
+	<head>
+		<meta charset="UTF-8" />
+		<meta
+			http-equiv="X-UA-Compatible"
+			content="IE=edge" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1.0" />
+		<title>Weather Report</title>
+		<link
+			rel="preconnect"
+			href="https://fonts.gstatic.com" />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Rubik&display=swap"
+			rel="stylesheet" />
+		<link
+			rel="stylesheet"
+			href="styles/index.css" />
+	</head>
+	<body>
+		<header>
+			<h1 id="greeting">Hello,</h1>
+		</header>
+		<section id="weather">
+            <section id="city_temp"></section>
+			    <button
+				id="drecrease"
+				class="weather-button">
+				-
+			    </button>
+			    <div id="temperature">80 degrees</div>
+			    <button
+				    id="increase"
+				    class="weather-button">+</button>
+            </section>
+
+			<section class="city-name__section">
+				<h2>City Name</h2>
+				<input
+					type="text"
+					id="cityNameInput" />
+				<button
+					id="cityNameReset"
+					class="city-name__reset-btn">
+					Reset
+				</button>
+			</section>
+		</section>
+        <section class="garden__section">
+            <h2>Weather Garden</h2>
+            <div id="gardenContent" class="garden__content">
+                <div id="sky"></div>
+                <div id="landscape"></div>
+            </div>
+		<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+		<script src="./src/index.js"></script>
+	</body>
 </html>
