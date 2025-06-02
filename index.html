@@ -26,34 +26,37 @@
 		<section id="weather">
             <section id="city_temp"></section>
 			    <button
-				id="drecrease"
+				id="decrease"
 				class="weather-button">
-				-
+			        -
 			    </button>
-			    <div id="temperature">80 degrees</div>
+			    <div id="temperature">80</div>
 			    <button
-				    id="increase"
-				    class="weather-button">+</button>
-            </section>
+				id="increase"
+				class="weather-button">
+                    +
+                </button>
+        </section>
 
-			<section class="city-name__section">
-				<h2>City Name</h2>
-				<input
-					type="text"
-					id="cityNameInput" />
-				<button
-					id="cityNameReset"
-					class="city-name__reset-btn">
-					Reset
-				</button>
-			</section>
-		</section>
+        <section class="city-name__section">
+            <h2>City Name</h2>
+            <input
+                type="text"
+                id="cityNameInput" />
+            <button
+                id="cityNameReset"
+                class="city-name__reset-btn">
+                Reset
+            </button>
+        </section>
+		
         <section class="garden__section">
             <h2>Weather Garden</h2>
             <div id="gardenContent" class="garden__content">
                 <div id="sky"></div>
                 <div id="landscape"></div>
             </div>
+        </section>
 		<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 		<script src="./src/index.js"></script>
 	</body>
