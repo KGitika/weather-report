@@ -69,6 +69,34 @@ document.addEventListener('DOMContentLoaded', () => {
 		cityDisplay.textContent = 'City Name'; //default
 	});
 });
+
+const getLocation = (city) =>{
+	axios.get(`http://localhost:5000/location?q=${city}`)
+	.then((response) => {
+        const lat = response.data[0].lat;
+		const long = response.data[0].long;
+        getWeather(lat, long);
+	})
+	.catch((error) => {
+		console.error("Error fetching location", error);
+	})
+}
+
+const getWeather = (lat, long) =>{
+	axios.get(`http://localhost:5000/location?lat=${lat}&long=${long}`)
+	.then(
+		(response) => {
+            const tempK = response.data.current.temp;
+			const tempF = Math.round( ((tempK - 273.15) * 9)/5+32 );
+            tempDisplay.textContent = tempF;
+		}
+	)
+	.catch(
+		(error) =>{
+			console.error("Error featching weather:", error);
+		}
+	)
+}
 // Initial load
 updateTemperatureDisplay();
 
