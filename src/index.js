@@ -54,6 +54,21 @@ document.getElementById('decrease').addEventListener('click', () => {
 	updateTemperatureDisplay();
 });
 
+// UPDATE CITY NAME BASED ON INPUT
+document.addEventListener('DOMContentLoaded', () => {
+	const cityInput = document.getElementById('cityNameInput');
+	const cityDisplay = document.getElementById('cityNameDisplay');
+	const resetButton = document.getElementById('cityNameReset');
+
+	cityInput.addEventListener('input', () => {
+		cityDisplay.textContent = cityInput.value;
+	});
+
+	resetButton.addEventListener('click', () => {
+		cityInput.value = '';
+		cityDisplay.textContent = 'City Name'; //default
+	});
+});
 // Initial load
 updateTemperatureDisplay();
 
