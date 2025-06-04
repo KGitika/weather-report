@@ -72,7 +72,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 const getLocation = (city) => {
 	axios
-		.get(`http://localhost:5000/location?q=${city}`)
+		.get(`http://127.0.0.1:5000/location?q=${city}`)
 		.then((response) => {
 			const lat = response.data[0].lat;
 			const lon = response.data[0].lon;
@@ -85,11 +85,13 @@ const getLocation = (city) => {
 
 const getWeather = (lat, lon) => {
 	axios
-		.get(`http://localhost:5000/location?lat=${lat}&lon=${lon}`)
+		.get(`http://127.0.0.1:5000/weather?lat=${lat}&lon=${lon}`)
 		.then((response) => {
-			const tempK = response.data.current.temp;
+			console.log('Raw weather response.data →', response.data);
+			const tempK = response.data.main.temp;
 			const tempF = Math.round(((tempK - 273.15) * 9) / 5 + 32);
-			tempDisplay.textContent = tempF;
+			temperature = tempF;                  
+			updateTemperatureDisplay();          
 		})
 		.catch((error) => {
 			console.error('Error featching weather:', error);
