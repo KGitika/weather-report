@@ -30,50 +30,48 @@
 			href="styles/index.css" />
 	</head>
 	<body>
-        <div id="app">
-		<header>
-			<h1 id="greeting"></h1>
-		</header>
-		<section id="weather">
-			<section id="city_temp"></section>
-			<button
-				id="decrease"
-				class="weather-button">
-				-
-			</button>
-			<div id="temperature">80</div>
-			<button
-				id="increase"
-				class="weather-button">
-				+
-			</button>
-            <button id="update_weather">
-                Update Weather
-            </button>
-		</section>
+		<div id="app">
+			<header>
+				<h1 id="greeting"></h1>
+			</header>
+			<section id="weather">
+				<section id="city_temp"></section>
+				<button
+					id="decrease"
+					class="weather-button">
+					-
+				</button>
+				<div id="temperature">80</div>
+				<button
+					id="increase"
+					class="weather-button">
+					+
+				</button>
+				<button id="getWeatherBtn">Get Weather</button>
+			</section>
 
-		<section class="city-name__section">
-			<h2 id="cityNameDisplay">City Name</h2>
-			<input
-				type="text"
-				id="cityNameInput" />
-			<button
-				id="cityNameReset"
-				class="city-name__reset-btn">
-				Reset
-			</button>
-		</section>
+			<section class="city-name__section">
+				<h2 id="cityNameDisplay">City Name</h2>
+				<input
+					type="text"
+					id="cityNameInput" />
+				<button
+					id="cityNameReset"
+					class="city-name__reset-btn">
+					Reset
+				</button>
+			</section>
 
-		<section class="garden__section">
-			<h2>Weather Garden</h2>
-			<div
-				id="gardenContent"
-				class="garden__content">
-				<div id="sky"></div>
-				<div id="landscape"></div>
-			</div>
-		</section>
-    </div>
+			<section class="garden__section">
+				<h2>Weather Garden</h2>
+				<div
+					id="gardenContent"
+					class="garden__content">
+					<div id="sky"></div>
+					<div id="landscape"></div>
+				</div>
+			</section>
+		</div>
 		<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 		<script src="./src/index.js"></script>
 	</body>
