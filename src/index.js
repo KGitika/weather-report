@@ -90,13 +90,27 @@ const getWeather = (lat, lon) => {
 			console.log('Raw weather response.data →', response.data);
 			const tempK = response.data.main.temp;
 			const tempF = Math.round(((tempK - 273.15) * 9) / 5 + 32);
-			temperature = tempF;                  
-			updateTemperatureDisplay();          
+			temperature = tempF;
+			updateTemperatureDisplay();
 		})
 		.catch((error) => {
 			console.error('Error featching weather:', error);
 		});
 };
+const skySelect = document.getElementById('sky-select');
+const skyDisplay = document.getElementById('sky-display');
+
+const skies = {
+	sunny: '☁️ ☁️ ☁️ ☀️ ☁️ ☁️',
+	cloudy: '☁️☁️ ☁️ ☁️☁️ ☁️ 🌤 ☁️ ☁️☁️',
+	rainy: '🌧🌈⛈🌧🌧💧⛈🌧🌦🌧💧🌧🌧',
+	snowy: '🌨❄️🌨🌨❄️❄️🌨❄️🌨❄️❄️🌨🌨',
+};
+
+skySelect.addEventListener('change', () => {
+	const selectedSky = skySelect.value;
+	skyDisplay.textContent = skies[selectedSky];
+});
 
 document.getElementById('getWeatherBtn').addEventListener('click', () => {
 	const city = document.getElementById('cityNameDisplay').textContent;
